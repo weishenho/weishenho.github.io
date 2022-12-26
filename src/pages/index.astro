@@ -1,10 +1,33 @@
 ---
+import Projects from "../components/Projects";
 import Skills from "../components/Skills";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Wei Shen | Fullstack Developer">
   <main>
+    <div class="py-6 flex flex-col items-center justify-center">
+      <div >
+
+        <img
+          class="border-[6px] border-gray-300 rounded-full h-[250px] shadow-xl"
+          src={"https://avatars.githubusercontent.com/u/15232303?v=4"}
+          alt="Avatar placeholder"
+        />
+      </div>
+
+      <h1 class="mt-2 font-semibold text-2xl">Ho Wei Shen</h1>
+      <div class="h-12 text-2xl font-semibold">Fullstack Developer</div>
+      <p class="w-[768px] text-base mb-3 text-justify">
+        Hi i am Wei Shen. I studied computer scienece from the Nanyang
+        Technological University in Singapore. I am a fullstack developer who is
+        passionate about software engineering, artificial intelligence and
+        technology in general. I am a good team player and able to work
+        independently as well. I always strive to produce quality work within
+        the deadline.
+      </p>
+    </div>
     <Skills />
+    <Projects />
   </main>
 </Layout>
