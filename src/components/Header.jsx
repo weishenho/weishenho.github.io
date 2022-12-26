@@ -18,9 +18,7 @@ const Header = () => {
         >
           Home
         </a>
-        {/* <button type="button" onClick={setTheme}>
-          sdsad
-        </button> */}
+
       </div>
     </header>
   );
