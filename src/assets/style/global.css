@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  footer {
+    @apply text-white;
+  }
+  .social-links {
+    @apply text-base;
+  }
+  #skills {
+    @apply bg-zinc-800 w-full;
+    padding-bottom: 10%;
+    width: 100%;
+  }
+
+  .skills-tile {
+    background-color: hsla(15, 22%, 96%, 0.05);
+    border-radius: 8px;
+    margin: 5px 0;
+    padding: 10px 10px 5px;
+    width: 100px;
+  }
+}
