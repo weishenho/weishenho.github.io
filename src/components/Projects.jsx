@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-// import ProjectDetailsModal from "./ProjectDetailsModal";
+import React, { useState } from "react";
+import ProjectDetailsModal from "./ProjectDetailsModal";
 
 const PROJECTS = [
   {
@@ -54,7 +54,7 @@ const PROJECTS = [
       "images/portfolio/cgh/6.jpg",
       "images/portfolio/cgh/7.jpg",
     ],
-    url: "https://m.apkpure.com/antimicrobial-guidelines-cgh/com.sgh.antimicrobialo",
+    url: "https://m.apkpure.com/antimicrobial-guidelines-cgh/com.sgh.antimicrobial",
     technologies: [
       {
         class: "devicon-android-plain",
@@ -71,62 +71,58 @@ const PROJECTS = [
     ],
   },
 ];
-class Projects extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      deps: {},
-      detailsModalShow: false,
-    };
-  }
+const Projects = () => {
+  const [modalShow, setModalShow] = useState(false);
+  const [selectedData, setSelctedData] = useState({});
+  let detailsModalShow = (data) => {
+    setSelctedData(data);
+    setModalShow(true);
+  };
 
-  render() {
-    let detailsModalShow = (data) => {
-      this.setState({ detailsModalShow: true, deps: data });
-    };
+  let detailsModalClose = () => {
+    setSelctedData({});
+    setModalShow(false);
+  };
 
-    let detailsModalClose = () => this.setState({ detailsModalShow: false });
-
-    var sectionName = "projects";
-    var projects = PROJECTS.map(function (projects) {
-      return (
-        <div
-          key={projects.title}
-          className="portfolio-item cursor-pointer"
-          onClick={() => detailsModalShow(projects)}
-        >
-          <div>
-            <img
-              src={projects.images[0]}
-              alt="projectImages"
-              className="h-[230px] object-contain object-center mx-auto"
-            />
-            <span className="project-date">{projects.startDate}</span>
-            <br />
-            <p className="project-title mt-3 w-[80%] mx-auto">{projects.title}</p>
-          </div>
-        </div>
-      );
-    });
-
+  var sectionName = "projects";
+  var projects = PROJECTS.map(function (project) {
     return (
-      <section id="portfolio">
-        <h1 className="text-white text-lg font-bold text-center uppercase tracking-[3px] pb-[5%] pt-[5%]">
-          <span className="text-gray-700">{sectionName}</span>
-        </h1>
-
-        <div className="mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-2 grid-flow-row">
-          {projects}
+      <div
+        key={project.title}
+        className="portfolio-item cursor-pointer"
+        onClick={() => detailsModalShow(project)}
+      >
+        <div>
+          <img
+            src={project.images[0]}
+            alt="projectImages"
+            className="h-[230px] object-contain object-center mx-auto"
+          />
+          <span className="project-date">{project.startDate}</span>
+          <br />
+          <p className="project-title mt-3 w-[80%] mx-auto">{project.title}</p>
         </div>
-
-        {/* <ProjectDetailsModal
-            show={this.state.detailsModalShow}
-            onHide={detailsModalClose}
-            data={this.state.deps}
-          /> */}
-      </section>
+      </div>
     );
-  }
-}
+  });
+
+  return (
+    <section id="portfolio">
+      <h1 className="text-white text-lg font-bold text-center uppercase tracking-[3px] pb-[5%] pt-[5%]">
+        <span className="text-gray-700">{sectionName}</span>
+      </h1>
+
+      <div className="mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-2 grid-flow-row">
+        {projects}
+      </div>
+
+      <ProjectDetailsModal
+        show={modalShow}
+        onHide={detailsModalClose}
+        data={selectedData}
+      />
+    </section>
+  );
+};
 
 export default Projects;
