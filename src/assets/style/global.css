@@ -28,8 +28,6 @@
     @apply transition duration-300 transform  mx-auto rounded hover:scale-110 bg-white max-w-full text-center px-2 pt-2 pb-1;
     box-shadow: 0 4px 6px rgb(0 0 0 / 30%);
   }
-  .foto {
-  }
 
   .project-date {
     background-color: dimgray;
@@ -43,11 +41,6 @@
     z-index: -500;
   }
 
-  #portfolio {
-    background: #dadada;
-    padding-bottom: 5%;
-  }
-
   .project-title {
     color: #000;
     font: 18px/24px opensans-bold, sans-serif;
@@ -55,5 +48,11 @@
     margin-top: 5%;
     text-align: center;
     text-transform: uppercase;
+  }
+
+  .experience-icon {
+    font-size: 200%;
+    margin-top: 25%;
+    color: #bec3c6;
   }
 }

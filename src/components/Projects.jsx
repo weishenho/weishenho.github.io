@@ -107,7 +107,7 @@ const Projects = () => {
   });
 
   return (
-    <section id="portfolio">
+    <section id="portfolio" className="pb-5 bg-zinc-200">
       <h1 className="text-white text-lg font-bold text-center uppercase tracking-[3px] pb-[5%] pt-[5%]">
         <span className="text-gray-700">{sectionName}</span>
       </h1>

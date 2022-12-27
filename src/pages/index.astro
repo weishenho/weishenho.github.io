@@ -1,4 +1,5 @@
 ---
+import Experience from "../components/Experience";
 import Projects from "../components/Projects";
 import Skills from "../components/Skills";
 import Layout from "../layouts/Layout.astro";
@@ -7,8 +8,7 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="Wei Shen | Fullstack Developer">
   <main>
     <div class="py-6 flex flex-col items-center justify-center">
-      <div >
-
+      <div>
         <img
           class="border-[6px] border-gray-300 rounded-full h-[250px] shadow-xl"
           src={"https://avatars.githubusercontent.com/u/15232303?v=4"}
@@ -27,7 +27,8 @@ import Layout from "../layouts/Layout.astro";
         the deadline.
       </p>
     </div>
+    <Experience client:load/>
     <Skills />
-    <Projects client:load/>
+    <Projects client:load />
   </main>
 </Layout>
