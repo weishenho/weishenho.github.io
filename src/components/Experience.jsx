@@ -166,7 +166,7 @@ const Experience = (props) => {
               color: "#fff",
               textAlign: "center",
             }}
-            icon={<i className="fas fa-hourglass-start experience-icon"></i>}
+            icon={<i className="fas fa-hourglass-start text-2xl mt-[25%] text-slate-500"></i>}
           />
         </VerticalTimeline>
       </div>
