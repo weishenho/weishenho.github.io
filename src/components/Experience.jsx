@@ -33,32 +33,32 @@ export const experiences = [
     projectName: "Human Resource Management System (HRMS)",
     imgs: [
       {
-        src: "images/hrms/1.png",
+        src: "../images/hrms/1.png",
         heading: "",
         description: "",
       },
       {
-        src: "images/hrms/2.png",
+        src: "../images/hrms/2.png",
         heading: "",
         description: "",
       },
       {
-        src: "images/hrms/6.png",
+        src: "../images/hrms/6.png",
         heading: "Organisation Chart",
         description: "Built from scratch to meet design requirements",
       },
       {
-        src: "images/hrms/3.png",
+        src: "../images/hrms/3.png",
         heading: "",
         description: "",
       },
       {
-        src: "images/hrms/4.png",
+        src: "../images/hrms/4.png",
         heading: "",
         description: "",
       },
       {
-        src: "images/hrms/5.png",
+        src: "../images/hrms/5.png",
         heading: "",
         description: "",
       },

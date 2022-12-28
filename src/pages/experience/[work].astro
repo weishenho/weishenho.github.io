@@ -2,6 +2,7 @@
 import Work from "../../components/expPages/Work";
 import Layout from "../../layouts/Layout.astro";
 import { experiences } from "../../components/Experience";
+import MyCarousel from "../../components/MyCarousel";
 
 export function getStaticPaths() {
   const result = experiences.map((e, i) => {
@@ -20,47 +21,39 @@ const data = Astro.props;
 
 <Layout title="Wei Shen | Fullstack Developer">
   <main>
+    <div class="container mx-auto flex flex-col py-6">
+      <div class="font-sans text-2xl tracking-tight font-medium">
+        <p>
+          {data.company}
+          {data.years ? `(${data.years})` : ""}
+        </p>
+      </div>
 
-    <div class="container mx-auto">
-      <div class="row">
-        <div class="col job-title">
-          <p>
-            {data.company}
-            {data.years ? `(${data.years})` : ""}
-          </p>
-        </div>
+      <div class="mt-2 font-mono text-2xl">
+        {data.projectName}
       </div>
-      <div class="row mb-3">
-        <div class="col">
-          <div style={{ display: "block" }} class="mx-auto">
-            <div class="prjName">{data.projectName}</div>
-          </div>
-        </div>
+
+      <div class="h-[660px]">
+        <MyCarousel imgs={data.imgs} client:load />
       </div>
-      <div class="row">
+
+      <div class="text-xl tracking-wide text-justify">
         {data.description ? <p>{data.description}</p> : null}
       </div>
-      <div class="row mb-5 job-desc">
-        <div class="col-8">
+      <div class="grid grid-flow-row-dense grid-cols-12 mt-5 mb-5 job-desc">
+        <div class="col-span-8">
           {
             data.contributionPoints ? (
-              <div class="d-flex flex-column">
-                <div
-                  class="d-flex"
-                  style={{
-                    fontSize: 20,
-                    fontWeight: "bold",
-                    letterSpacing: ".1em",
-                  }}
-                >
+              <div class="flex flex-col">
+                <div class="text-xl font-bold tracking-wide">
                   RESPONSIBILITIES / CONTRIBUTION
                 </div>
-                <div class="d-flex">
+                <div class="pl-6 text-lg mt-1">
                   {Array.isArray(data.contributionPoints) &&
                   data.contributionPoints ? (
-                    <ul>
+                    <ul class="list-disc">
                       {data.contributionPoints.map((p: string) => {
-                        return <li>{p}  </li>;
+                        return <li>{p} </li>;
                       })}
                     </ul>
                   ) : null}
@@ -69,23 +62,16 @@ const data = Astro.props;
             ) : null
           }
         </div>
-        <div class="col-4">
+        <div class="ccol-span-4">
           {
             (Array.isArray(data.detailsTech) && data.detailsTech.length) > 0 ? (
-              <div class="d-flex flex-column">
-                <div
-                  class="d-flex"
-                  style={{
-                    fontSize: 20,
-                    fontWeight: "bold",
-                    letterSpacing: ".1em",
-                  }}
-                >
-                  TECHNOLOGIES
+              <div class="flex flex-col">
+                <div class="text-xl font-bold tracking-wide">TECHNOLOGIES</div>
+                <div class="mt-1 text-lg">
+                  {data.detailsTech.map((detail: string) => {
+                    return <div>{detail}</div>;
+                  })}
                 </div>
-                {data.detailsTech.map((detail: string) => {
-                  return <div class="d-flex">{detail}</div>;
-                })}
               </div>
             ) : null
           }
