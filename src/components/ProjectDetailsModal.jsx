@@ -30,15 +30,6 @@ const ProjectDetailsModal = (props) => {
     return <div key={i} data-src={elem} />;
   });
 
-  const options = {
-    activeItemPosition: 1,
-    interval: 15000,
-
-    indicators: {
-      activeClasses: "bg-gray-800",
-      inactiveClasses: "bg-gray-800/50 hover:bg-gray-800",
-    },
-  };
   return (
     <Transition appear show={props.show} as={Fragment}>
       <Dialog as="div" className="relative z-10" onClose={props.onHide}>
@@ -94,7 +85,7 @@ const ProjectDetailsModal = (props) => {
                       ></span>
                     </div>
                     <div className="h-[660px]">
-                      <Carousel {...options}>
+                      <Carousel>
                         {(images || []).map((elem, i) => {
                           return (
                             <div className="bg-slate-700 w-full pb-[60px]">

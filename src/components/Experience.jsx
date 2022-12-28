@@ -9,13 +9,14 @@ import reactIcon from "@iconify/icons-logos/react";
 import dotnetIcon from "@iconify/icons-logos/dotnet";
 import pythonIcon from "@iconify/icons-logos/python";
 
-const experiences = [
+export const experiences = [
   {
     company: "Time access international",
     title: "Senior Software Engineer",
     years: "01/2021 - 01/2023",
     mainTech: ["ReactJS"],
-    link: "/timeaccesshrms",
+    link: "/experience/timeaccesshrms",
+    work: "timeaccesshrms",
     icon: <Icon icon={reactIcon} />,
     technologies: [
       "React Native",
@@ -28,6 +29,64 @@ const experiences = [
       "Sequelize",
       "CASL",
       "NodeJS",
+    ],
+    projectName: "Human Resource Management System (HRMS)",
+    imgs: [
+      {
+        src: "images/hrms/1.png",
+        heading: "",
+        description: "",
+      },
+      {
+        src: "images/hrms/2.png",
+        heading: "",
+        description: "",
+      },
+      {
+        src: "images/hrms/6.png",
+        heading: "Organisation Chart",
+        description: "Built from scratch to meet design requirements",
+      },
+      {
+        src: "images/hrms/3.png",
+        heading: "",
+        description: "",
+      },
+      {
+        src: "images/hrms/4.png",
+        heading: "",
+        description: "",
+      },
+      {
+        src: "images/hrms/5.png",
+        heading: "",
+        description: "",
+      },
+    ],
+    description:
+      "Development of an entire HRMS that features almost eight key modules: Personnel, Time Attendance, Payroll, Leaves, Appraisal, Benefits, Claims, and Devices. I build the web and mobile(iOS/ Android) applications as the primary developer. The e-scheduling and HRMS grants, two psg government grants that were eventually approved, are another goal of the job.",
+    contributionPoints: [
+      "Develop the web app and mobile app with ReactJS and React Native",
+      "Translate mock-ups/designs into the front-end",
+      "Implement Restful Apis, reports generation, backend with Expressjs/NodeJs",
+      "Fix production issues in AWS, Jenkins, Redis, etc.",
+    ],
+
+    detailsTech: [
+      "ReactJS",
+      "React Native",
+      "Tailwind CSS",
+      "Headless UI Components",
+      "GPS & Google Maps",
+      "Framer Motion",
+      "ExpressJS (NodeJS)",
+      "PostgreSQL",
+      "Sequelize",
+      "JSReport",
+      "CASL",
+      "Docker",
+      "Jenkins",
+      "AWS",
     ],
   },
   {
@@ -166,7 +225,9 @@ const Experience = (props) => {
               color: "#fff",
               textAlign: "center",
             }}
-            icon={<i className="fas fa-hourglass-start text-2xl mt-[25%] text-slate-500"></i>}
+            icon={
+              <i className="fas fa-hourglass-start text-2xl mt-[25%] text-slate-500"></i>
+            }
           />
         </VerticalTimeline>
       </div>
