@@ -55,54 +55,30 @@ const ProjectDetailsModal = (props) => {
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <Dialog.Panel className="w-full max-w-3xl transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
-                <span onClick={props.onHide} className="modal-close">
-                  <i className="fas fa-times fa-3x close-icon"></i>
+              <Dialog.Panel className="w-full max-w-3xl transform overflow-hidden rounded-2xl bg-white px-8 py-6 text-left align-middle shadow-xl transition-all">
+                <span onClick={props.onHide} className="cursor-pointer">
+                  <i className="fas fa-times fa-2x close-icon"></i>
                 </span>
-                <div className="col-md-12">
-                  <div
-                    className={`${"col-md-10"} mx-auto`}
-                    style={{ paddingBottom: "50px" }}
-                  >
-                    <div className="slider-tab">
-                      <span
-                        className="iconify slider-iconfiy"
-                        data-icon="emojione:red-circle"
-                        data-inline="false"
-                        style={{ marginLeft: "5px" }}
-                      ></span>{" "}
-                      &nbsp;{" "}
-                      <span
-                        className="iconify slider-iconfiy"
-                        data-icon="twemoji:yellow-circle"
-                        data-inline="false"
-                      ></span>{" "}
-                      &nbsp;{" "}
-                      <span
-                        className="iconify slider-iconfiy"
-                        data-icon="twemoji:green-circle"
-                        data-inline="false"
-                      ></span>
-                    </div>
-                    <div className="h-[660px]">
-                      <Carousel>
-                        {(images || []).map((elem, i) => {
-                          return (
-                            <div className="bg-slate-700 w-full pb-[60px]">
-                              <img
-                                key={i}
-                                src={elem}
-                                className="object-contain h-[600px] mx-auto"
-                              />
-                            </div>
-                          );
-                        })}
-                      </Carousel>
-                    </div>
+                <div className="mt-2">
+                  <div className="h-[660px]">
+                    <Carousel>
+                      {(images || []).map((elem, i) => {
+                        return (
+                          <div className="bg-slate-700 w-full pb-[60px]">
+                            <img
+                              key={i}
+                              src={elem}
+                              className="object-contain h-[600px] mx-auto"
+                            />
+                          </div>
+                        );
+                      })}
+                    </Carousel>
                   </div>
-                  <div className="col-md-10 mx-auto">
+
+                  <div className="">
                     <h3 className="py-3 text-xl font-semibold">{title}</h3>
-                    <p className="modal-description">{description}</p>
+                    <p>{description}</p>
                     {url ? (
                       <h4 className="mb-4 font-semibold">
                         More details here:{" "}

@@ -6,7 +6,7 @@ const MyCarousel = ({ imgs }) => {
     <Carousel>
       {(imgs || []).map((elem, i) => {
         return (
-          <div className="bg-stone-200 w-full pb-[40px]" key={elem.src}>
+          <div className="bg-stone-200 rounded-2xl w-full pb-[40px]" key={elem.src}>
             <img src={elem.src} className="object-contain h-[600px] mx-auto" />
           </div>
         );
