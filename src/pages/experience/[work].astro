@@ -33,9 +33,13 @@ const data = Astro.props;
         {data.projectName}
       </div>
 
-      <div class="h-[660px]">
-        <MyCarousel imgs={data.imgs} client:load />
-      </div>
+      {
+        Array.isArray(data.imgs) && data.imgs.length > 0 ? (
+          <div class="h-[660px]">
+            <MyCarousel imgs={data.imgs} client:load />
+          </div>
+        ) : null
+      }
 
       <div class="text-xl tracking-wide text-justify">
         {data.description ? <p>{data.description}</p> : null}
@@ -50,7 +54,7 @@ const data = Astro.props;
                 </div>
                 <div class="pl-6 text-lg mt-1">
                   {Array.isArray(data.contributionPoints) &&
-                  data.contributionPoints ? (
+                  data.contributionPoints.length > 0 ? (
                     <ul class="list-disc">
                       {data.contributionPoints.map((p: string) => {
                         return <li>{p} </li>;
