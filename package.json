@@ -8,7 +8,8 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@astrojs/react": "^1.2.2",
@@ -26,6 +27,7 @@
   },
   "devDependencies": {
     "@iconify/icons-logos": "^1.2.20",
-    "@iconify/react": "^4.0.1"
+    "@iconify/react": "^4.0.1",
+    "gh-pages": "^4.0.0"
   }
 }
