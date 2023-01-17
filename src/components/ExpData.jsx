@@ -28,35 +28,61 @@ export const experiences = [
     projectName: "Human Resource Management System (HRMS)",
     imgs: [
       {
-        src: "../images/hrms/1.png",
+        src: "/images/hrms/1.png",
         heading: "",
         description: "",
       },
       {
-        src: "../images/hrms/2.png",
+        src: "/images/hrms/2.png",
         heading: "",
         description: "",
       },
       {
-        src: "../images/hrms/6.png",
+        src: "/images/hrms/4.png",
+        heading: "",
+        description: "",
+      },
+      {
+        src: "/images/hrms/5.png",
+        heading: "",
+        description: "",
+      },
+      {
+        src: "/images/hrms/6.png",
         heading: "Organisation Chart",
         description: "Built from scratch to meet design requirements",
       },
       {
-        src: "../images/hrms/3.png",
+        src: "/images/hrms/7.png",
+        heading: "Organisation Chart",
+        description: "Built from scratch to meet design requirements",
+      },
+      {
+        src: "/images/hrms/8.png",
+        heading: "Organisation Chart",
+        description: "Built from scratch to meet design requirements",
+      },
+      {
+        src: "/images/hrms/0.png",
         heading: "",
         description: "",
       },
       {
-        src: "../images/hrms/4.png",
+        src: "/images/hrms/3.png",
         heading: "",
         description: "",
       },
       {
-        src: "../images/hrms/5.png",
+        src: "/images/hrms/9.png",
         heading: "",
         description: "",
       },
+      {
+        src: "/images/hrms/11.png",
+        heading: "",
+        description: "",
+      },
+
     ],
     description:
       "Development of an entire HRMS that features almost eight key modules: Personnel, Time Attendance, Payroll, Leaves, Appraisal, Benefits, Claims, and Devices. I build the web and mobile(iOS/ Android) applications as the primary developer. The e-scheduling and HRMS grants, two psg government grants that were eventually approved, are another goal of the job.",
@@ -113,22 +139,22 @@ export const experiences = [
     projectName: "Human Resource Management System (HRMS)",
     imgs: [
       {
-        src: "../images/plateable/1.jpeg",
+        src: "/images/plateable/1.jpeg",
         heading: "",
         description: "",
       },
       {
-        src: "../images/plateable/2.jpeg",
+        src: "/images/plateable/2.jpeg",
         heading: "",
         description: "",
       },
       {
-        src: "../images/plateable/3.jpeg",
+        src: "/images/plateable/3.jpeg",
         heading: "",
         description: "",
       },
       {
-        src: "../images/plateable/4.jpeg",
+        src: "/images/plateable/4.jpeg",
         heading: "",
         description: "",
       },

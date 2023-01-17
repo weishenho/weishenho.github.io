@@ -20,7 +20,7 @@ const data = Astro.props;
 
 <Layout title="Wei Shen | Fullstack Developer">
   <main>
-    <div class="container mx-auto flex flex-col py-6">
+    <div class="container px-2 mx-auto flex flex-col py-6 md:px-0">
       <div class="font-sans text-2xl tracking-tight font-medium">
         <p>
           {data.company}
@@ -43,8 +43,8 @@ const data = Astro.props;
       <div class="text-xl tracking-wide text-justify">
         {data.description ? <p>{data.description}</p> : null}
       </div>
-      <div class="grid grid-flow-row-dense grid-cols-12 mt-5 mb-5 job-desc">
-        <div class="col-span-8">
+      <div class="grid grid-flow-row grid-cols-12 gap-x-2 gap-y-6 mt-5 mb-5 job-desc">
+        <div class="col-span-12 md:col-span-8">
           {
             data.contributionPoints ? (
               <div class="flex flex-col">
@@ -65,7 +65,7 @@ const data = Astro.props;
             ) : null
           }
         </div>
-        <div class="ccol-span-4">
+        <div class="col-span-12 md:col-span-4 ">
           {
             (Array.isArray(data.detailsTech) && data.detailsTech.length) > 0 ? (
               <div class="flex flex-col">
